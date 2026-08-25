@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HoraCerta - Login do Calendário Escolar">
+    <title>HoraCerta - Entrar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+
+    <div class="login-container">
+        
+        <button 
+            class="login-theme-toggle" 
+            id="themeToggle" 
+            title="Modo Noturno"
+            aria-label="Alternar modo noturno"
+        >
+            ☾
+        </button>
+
+        <div class="login-card">
+            
+            <div class="login-header">
+                <div class="brand-icon">▦</div>
+                <h1>HoraCerta</h1>
+                <p>Acesse seu calendário escolar</p>
+            </div>
+
+            <!-- Adicionado action="../index.html" para caso o JS falhe e também para semântica HTML -->
+            <form id="loginForm" class="login-form" action="../index.html">
+                
+                <div class="form-group">
+                    <label for="userType">Perfil de Acesso</label>
+                    <select id="userType" required>
+                        <option value="Aluno">Aluno</option>
+                        <option value="Professor">Professor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail ou Matrícula</label>
+                    <input 
+                        type="text" 
+                        id="email" 
+                        placeholder="Ex: aluno@escola.com ou 20261001" 
+                        required
+                        autocomplete="username"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <div class="label-row">
+                        <label for="password">Senha</label>
+                        <a href="#" class="forgot-password" id="forgotPassword">Esqueceu?</a>
+                    </div>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        placeholder="••••••••" 
+                        required
+                        autocomplete="current-password"
+                    >
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Lembrar de mim</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="login-button">
+                    Entrar no Sistema
+                </button>
+
+            </form>
+
+            <div class="login-footer">
+                <span>Instituto Federal de Mato Grosso · Ano Letivo 2026</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
