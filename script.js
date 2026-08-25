@@ -25,6 +25,7 @@ let activeCategories = new Set([
     "Feriados",
     "Reuniões",
     "Atividades"
+    "Aula Vagas"
 ]);
 
 
